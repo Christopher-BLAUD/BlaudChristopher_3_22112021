@@ -1,0 +1,353 @@
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Utils/list";
+*{
+    box-sizing: border-box;
+    font-family: 'roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header-logo{
+    @include header;
+}
+
+/* Loader */
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+    animation: loader 3s linear;
+    &_circle{
+        @include loader-circle($primary-color);
+        animation: jump .3s linear -0.9s infinite alternate;
+        }
+    &_circle-2{
+        @include loader-circle($tertiary-color);
+        animation: jump .3s linear .1s infinite alternate;
+    }
+    &_circle-3{
+        @include loader-circle($secondary-color);
+        animation: jump .3s linear .2s infinite alternate;
+    }
+}
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+@keyframes loader {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+
+/*    Recherche   */
+
+.form{
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    & input{
+        border: none;
+        background-color: #eaeaea;
+        margin-left: 1em;
+        width: 57%;
+        outline: none;
+        &::placeholder{
+            font-weight: bold;
+        }
+    }
+    & p{
+        display: flex;
+        justify-content: center;
+        margin: .8em;
+    }
+}
+
+/* Section exploration */
+
+.explore_info{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: #f6f6f6;
+    & h1{
+        padding: 0 3em;
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 1.5em;
+    }
+    &_txt{
+        padding: 0 2em;
+        text-align: center;
+        font-size: 1em;
+    }
+    &_btn{
+        @include button (200px);
+        margin-bottom: 3em;
+    }
+}
+
+/*   Fonctionnement   */
+
+.functioning{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    margin: 2em 0;
+    &_choice{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        &_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1em 0;
+            width: 90%;
+            height: 70px;
+            border-radius: 20px;
+            flex-wrap: nowrap;
+            position: relative;
+            background-color: #f6f6f6;
+            box-shadow: 0px 6px 16px #cfcfcf;
+            & a{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+            }
+            &_number, i, span{
+                margin: 0 1em;
+                color: black;
+            }
+        }
+        &_number{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 23px;
+            left: -12px;
+            font-size: .9em;
+            width: 1.7em;
+            height: 1.7em;
+            border-radius: 50%;
+            background-color: $primary-color;
+            color: white;
+        }
+        &_icon{
+            display: flex;
+            width: 1em;
+            justify-content: center;
+            margin-left: 2em;
+        }
+}
+}
+
+/*  Restaurants   */
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    margin-bottom: 0;
+    padding: 0 1em;
+    background-color: $bg;
+    & h1{
+        margin-top: 2em;
+        margin-bottom: .5em;
+    }
+    &_card{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5em;
+        & article{
+            display: flex;
+            flex-direction: column;
+            height: 280px;
+            width: 100%;
+            margin: 1em 0;
+            border-radius: 20px;
+            box-shadow: 0px 6px 16px #cfcfcf;
+            overflow: hidden;
+            & a{
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: black;
+            }
+        }
+        &_pic_01{
+            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            @include card-restaurant-img;
+            &_txt{
+                @include card-restaurant-img-txt;
+            }
+        }
+        &_pic_02{
+            background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            @include card-restaurant-img;
+            &_txt{
+                @include card-restaurant-img-txt;
+            }
+        }
+        &_pic_03{
+            background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            @include card-restaurant-img;
+        }
+        &_pic_04{
+            background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            @include card-restaurant-img;
+        }
+        &_body{
+            display: flex;
+            height: 30%;
+            font-size: 1em;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 1em;
+            &_txt{
+                display: flex;
+                flex-direction: column;
+                width: 65%;
+                height: 100%;
+                justify-content: center;
+                padding-bottom: .5em;
+                & h2{
+                    margin: 0;
+                    margin-bottom: .2em;
+                    font-size: 1.2em;
+                }
+                & span{
+                    font-size: 1.2em;
+                }
+                
+            }
+            &_icon{
+                display: flex;
+                width: 35%;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 1.5em;
+                & i{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+/*   Footer   */
+
+.footer{
+    @include footer;
+}
+
+/*   Menu des restaurants   */
+
+.header-menu{
+    @include header;
+    &_icon{
+        position: absolute;
+        left: 30px;
+        top: 27px;
+        font-size: 1.3em;
+        & a{
+            color: black;
+        }
+    }
+}
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    &_pic_ldds{
+        @include layout-bg-img-menu;
+        background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)
+    }
+    &_pic_alf{
+        @include layout-bg-img-menu;
+        background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    }
+    &_pic_lne{
+        @include layout-bg-img-menu;
+        background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    }
+    &_pic_lpdg{
+        @include layout-bg-img-menu;
+        background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    }
+    &_list{
+        display: flex;
+        flex-direction: column;
+        margin-top: -4em;
+        background-color: $bg;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        padding: .5em 1em;
+        &_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 1em;
+            & h1{
+                font-family: 'shrikhand',Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1.9em;
+            }
+            & i{
+                font-size: 1.7em;
+            }
+        }
+        &_start{
+            @include layout-card-menu;
+            margin-bottom: 2em;
+        }
+        &_dish{
+            @include layout-card-menu;
+            margin-bottom: 2em;
+        }
+        &_dess{
+            @include layout-card-menu;
+            margin-bottom: 2em;
+        }
+    }
+    &_btn{
+        display: flex;
+        justify-content: center;
+        background-color: $bg;
+        & button{
+            @include button(170px);
+            margin: 1em 0;
+            margin-bottom: 4em;
+        }
+    }
+}

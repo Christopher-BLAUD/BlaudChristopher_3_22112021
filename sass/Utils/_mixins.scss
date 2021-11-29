@@ -1,0 +1,168 @@
+@mixin button($width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    width: $width;
+    height: 3.2em;
+    border-radius: 25px;
+    border: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
+    box-shadow: 0px 6px 16px #cfcfcf;
+    text-decoration: none;
+    font-size: .9em;
+    color: white;
+    font-weight: bold;
+}
+@mixin header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 6% 0;
+    padding-bottom: 3%;
+    box-shadow: 0px -5px 9px black;
+    & img{
+        width: 45%;
+    }
+}
+@mixin card-restaurant-img {
+    height: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    position: relative;
+}
+@mixin card-restaurant-img-txt {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 5.5em;
+    background-color: $tertiary-color;
+    color: darken($tertiary-color, 40);
+    font-weight: bold;
+}
+@mixin shadow {
+    box-shadow: 0px 6px 16px #cfcfcf;
+}
+@mixin footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding: 0 1.5em;
+    & h2{
+        font-family: 'Shrikhand', Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-size: 1.3em;
+        font-weight: lighter;
+    }
+    & ul{
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 2em;
+        line-height: 1.6em;
+        list-style: none;
+        & a{
+            display: flex;
+            text-decoration: none;
+            color: white;
+            width: 100%;
+        }
+        & i{
+            font-size: 1em;
+            margin-right: 1em;
+        }
+        & li{
+            display: flex;
+
+        }
+    }
+    &_icon{
+        width: 2em;
+    }
+}
+@mixin main-border-title {
+    border-bottom: 1px solid $tertiary-color;
+    width: 2.8em;
+        & h2{
+            font-size: 1.1em;
+            font-weight: lighter;
+            margin-bottom: .3em;
+            }
+}
+@mixin layout-card-menu {
+    display: flex;
+    flex-direction: column;
+        &_title{
+            display: flex;
+            width: 3em;
+            border-bottom: 3px solid $tertiary-color;
+            & h2{
+                font-size: 1.1em;
+                font-weight: lighter;
+                margin-bottom: .3em;
+                }
+            }
+            &_card{
+                display: flex;
+                height: 75px;
+                border-radius: 20px;
+                margin-top: 1em;
+                padding-left: .8em;
+                box-shadow: $shadow;
+                overflow: hidden;
+                &_info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 90%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    & h3{
+                        margin: .8em 0;
+                        margin-bottom: 0;
+                    }
+                    & span{
+                        margin-bottom: .9em;
+                    }
+                }
+                &_price{
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 0 1.5em;
+                    margin-bottom: .9em;
+                }
+                &_icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 20%;
+                    margin-right: -3em;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    font-size: 1.5em;
+                    background-color: $tertiary-color;
+                    color: white;                  
+                }
+            }
+        }
+@mixin layout-bg-img-menu{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+}
+@mixin loader-circle($color){
+    width: 30px;
+    height: 30px;
+    background-color: $color;
+    border-radius: 50%;
+    margin: 0 1em;
+}
