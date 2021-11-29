@@ -8,6 +8,7 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 .header-logo{
     @include header;
@@ -27,6 +28,7 @@ body{
     color: white;
     opacity: 0;
     animation: loader 3s linear;
+    animation-fill-mode: both;
     &_circle{
         @include loader-circle($primary-color);
         animation: jump .3s linear -0.9s infinite alternate;
@@ -45,7 +47,7 @@ body{
         background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
         & span{
             font-family: 'shrikhand', Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 5em;
+            font-size: 2.5em;
     }
     }
 }
@@ -63,12 +65,15 @@ body{
     }
     50%{
         opacity: 1;
+
     }
     75%{
         opacity: .5;
+
     }
     100%{
         opacity: 0;
+        z-index: -1;
     }
     
 }

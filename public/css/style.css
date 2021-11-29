@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .header-logo {
@@ -33,29 +34,30 @@ body {
   color: white;
   opacity: 0;
   animation: loader 3s linear;
+  animation-fill-mode: both;
 }
 .loader_circle {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   background-color: #9356DC;
   border-radius: 50%;
-  margin: 0 1em;
+  margin: 0 0.4em;
   animation: jump 0.3s linear -0.9s infinite alternate;
 }
 .loader_circle-2 {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   background-color: #99E2D0;
   border-radius: 50%;
-  margin: 0 1em;
+  margin: 0 0.4em;
   animation: jump 0.3s linear 0.1s infinite alternate;
 }
 .loader_circle-3 {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   background-color: #FF79DA;
   border-radius: 50%;
-  margin: 0 1em;
+  margin: 0 0.4em;
   animation: jump 0.3s linear 0.2s infinite alternate;
 }
 .loader_txt {
@@ -65,7 +67,7 @@ body {
 }
 .loader_txt span {
   font-family: "shrikhand", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 5em;
+  font-size: 2.5em;
 }
 
 @keyframes jump {
@@ -88,6 +90,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 /*    Recherche   */
