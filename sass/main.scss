@@ -39,6 +39,15 @@ body{
         @include loader-circle($secondary-color);
         animation: jump .3s linear .2s infinite alternate;
     }
+    &_txt{
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
+        & span{
+            font-family: 'shrikhand', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 5em;
+    }
+    }
 }
 @keyframes jump {
     0%{

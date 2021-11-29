@@ -8,7 +8,19 @@ body {
   padding: 0;
 }
 
-/* Animation du loader */
+.header-logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 6% 0;
+  padding-bottom: 3%;
+  box-shadow: 0px -5px 9px black;
+}
+.header-logo img {
+  width: 45%;
+}
+
+/* Loader */
 .loader {
   display: flex;
   justify-content: center;
@@ -46,6 +58,15 @@ body {
   margin: 0 1em;
   animation: jump 0.3s linear 0.2s infinite alternate;
 }
+.loader_txt {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+}
+.loader_txt span {
+  font-family: "shrikhand", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5em;
+}
 
 @keyframes jump {
   0% {
@@ -69,19 +90,7 @@ body {
     opacity: 0;
   }
 }
-.header-logo {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding: 6% 0;
-  padding-bottom: 3%;
-  box-shadow: 0px -5px 9px black;
-}
-.header-logo img {
-  width: 45%;
-}
-
-/*    RECHERCHE   */
+/*    Recherche   */
 .form {
   display: flex;
   justify-content: center;
@@ -103,6 +112,7 @@ body {
   margin: 0.8em;
 }
 
+/* Section exploration */
 .explore_info {
   display: flex;
   flex-flow: column wrap;
