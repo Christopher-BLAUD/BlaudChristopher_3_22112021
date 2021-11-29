@@ -519,6 +519,8 @@ body {
   padding-left: 0.8em;
   box-shadow: 0px 6px 16px #cfcfcf;
   overflow: hidden;
+  animation: show-menu 1.5s linear 0.5s both;
+  transform-origin: top;
 }
 .main-menu_list_start_card_info {
   display: flex;
@@ -578,6 +580,8 @@ body {
   padding-left: 0.8em;
   box-shadow: 0px 6px 16px #cfcfcf;
   overflow: hidden;
+  animation: show-menu 1.5s linear 1s both;
+  transform-origin: top;
 }
 .main-menu_list_dish_card_info {
   display: flex;
@@ -637,6 +641,8 @@ body {
   padding-left: 0.8em;
   box-shadow: 0px 6px 16px #cfcfcf;
   overflow: hidden;
+  animation: show-menu 1.5s linear 1.5s both;
+  transform-origin: top;
 }
 .main-menu_list_dess_card_info {
   display: flex;
@@ -672,6 +678,14 @@ body {
   font-size: 1.5em;
   background-color: #99E2D0;
   color: white;
+}
+@keyframes show-menu {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }
 .main-menu_btn {
   display: flex;

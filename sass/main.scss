@@ -379,16 +379,24 @@ body{
             }
         }
         &_start{
-            @include layout-card-menu;
+            @include layout-card-menu(.5s);
             margin-bottom: 2em;
         }
         &_dish{
-            @include layout-card-menu;
+            @include layout-card-menu(1s);
             margin-bottom: 2em;
         }
         &_dess{
-            @include layout-card-menu;
+            @include layout-card-menu(1.5s);
             margin-bottom: 2em;
+        }
+    }
+    @keyframes show-menu {
+        0%{
+            scale: 0;
+        }        
+        100%{
+            scale: 1;
         }
     }
     &_btn{
