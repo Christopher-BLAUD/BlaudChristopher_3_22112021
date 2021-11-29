@@ -152,6 +152,10 @@ body {
   font-weight: bold;
   margin-bottom: 3em;
 }
+.explore_info_btn:hover {
+  background: linear-gradient(303deg, rgba(147, 86, 220, 0.6574923547) 13%, rgba(255, 121, 218, 0.7247706422) 100%);
+  box-shadow: 0px 6px 16px darkgray;
+}
 
 /*   Fonctionnement   */
 .functioning {
@@ -179,6 +183,12 @@ body {
   background-color: #f6f6f6;
   box-shadow: 0px 6px 16px #cfcfcf;
 }
+.functioning_choice_btn:hover {
+  background-color: #f5edff;
+}
+.functioning_choice_btn:hover i {
+  color: #9356DC;
+}
 .functioning_choice_btn a {
   display: flex;
   align-items: center;
@@ -190,6 +200,7 @@ body {
 .functioning_choice_btn_number, .functioning_choice_btn i, .functioning_choice_btn span {
   margin: 0 1em;
   color: black;
+  font-weight: bold;
 }
 .functioning_choice_number {
   display: flex;
@@ -210,6 +221,9 @@ body {
   width: 1em;
   justify-content: center;
   margin-left: 2em;
+}
+.functioning_choice_icon i {
+  color: #7e7e7e;
 }
 
 /*  Restaurants   */
@@ -335,11 +349,40 @@ body {
   justify-content: flex-end;
   align-items: center;
   padding-right: 1.5em;
+  position: relative;
 }
-.restaurant_card_body_icon i {
+.restaurant_card_body_icon_empty {
   font-size: 1.5em;
+  z-index: 2;
+}
+.restaurant_card_body_icon_empty:hover + .restaurant_card_body_icon_full {
+  animation: heart 1s both;
+}
+.restaurant_card_body_icon_empty:hover {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.restaurant_card_body_icon_full {
+  position: absolute;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1.5em;
+  right: 18px;
+  top: 28px;
+  scale: 0;
 }
 
+@keyframes heart {
+  100% {
+    scale: 1;
+  }
+}
 /*   Footer   */
 .footer {
   display: flex;

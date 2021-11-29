@@ -123,6 +123,9 @@ body{
     &_btn{
         @include button (200px);
         margin-bottom: 3em;
+        &:hover{
+            @include btn-hover;
+        }
     }
 }
 
@@ -151,6 +154,12 @@ body{
             position: relative;
             background-color: #f6f6f6;
             box-shadow: 0px 6px 16px #cfcfcf;
+            &:hover{
+                background-color: #f5edff;
+                & i{
+                    color: $primary-color;
+                }
+            }
             & a{
                 display: flex;
                 align-items: center;
@@ -162,6 +171,7 @@ body{
             &_number, i, span{
                 margin: 0 1em;
                 color: black;
+                font-weight: bold;
             }
         }
         &_number{
@@ -183,9 +193,13 @@ body{
             width: 1em;
             justify-content: center;
             margin-left: 2em;
+            & i{
+                color: #7e7e7e;
+                }
+            }
         }
 }
-}
+
 
 /*  Restaurants   */
 
@@ -273,14 +287,37 @@ body{
                 justify-content: flex-end;
                 align-items: center;
                 padding-right: 1.5em;
-                & i{
+                position: relative;
+                &_empty{
                     font-size: 1.5em;
+                    z-index: 2;
+                    &:hover + .restaurant_card_body_icon_full{
+                        animation: heart 1s both;
+                    }
+                    &:hover{
+                        @include heart-color;
+                    }
+                    }
+                &_full{
+                    position: absolute;
+                    @include heart-color;
+                    width: 1.5em;
+                    height: 1.5em;
+                    font-size: 1.5em;
+                    right: 18px;
+                    top: 28px;
+                    scale: 0;
+                }
                 }
             }
         }
     }
+@keyframes heart {
+    100%{
+        scale: 1;
+    }
+    
 }
-
 /*   Footer   */
 
 .footer{
