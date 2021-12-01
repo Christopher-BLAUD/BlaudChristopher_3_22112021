@@ -126,17 +126,14 @@
                 &:hover > .main-menu_list_dish_card_icon{
                     margin-right: 0;
                     animation: checkbox .5s linear both;
-                    width: 5em;
                 }
                 &:hover > .main-menu_list_start_card_icon{
                     margin-right: 0;
                     animation: checkbox .5s linear both;
-                    width: 5em;
                 }
                 &:hover > .main-menu_list_dess_card_icon{
                     margin-right: 0;
                     animation: checkbox .5s linear both;
-                    width: 5em;
                 }
                 &:hover i{
                     animation: check-rotation .6s linear;
@@ -197,7 +194,7 @@
     margin: 0 .4em;
 }
 @mixin heart-color {
-    background: -webkit-linear-gradient(to bottom, $primary-color, $secondary-color);
+    background: linear-gradient(to bottom, $primary-color, $secondary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
