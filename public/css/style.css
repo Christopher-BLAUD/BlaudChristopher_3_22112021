@@ -68,7 +68,7 @@ body {
   padding-bottom: 1em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  background-image: -webkit-linear-gradient(to right bottom, #FF79DA, #9356DC);
 }
 .loader_txt span {
   font-family: "shrikhand", Verdana, Geneva, Tahoma, sans-serif;
@@ -364,14 +364,14 @@ body {
   animation: heart 1s both;
 }
 .restaurant_card_body_icon_empty:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
 .restaurant_card_body_icon_full {
   position: absolute;
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -522,7 +522,7 @@ body {
 .main-menu_list_start_card {
   display: flex;
   height: 75px;
-  width: 385px;
+  width: 22.5em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -535,20 +535,26 @@ body {
 .main-menu_list_start_card:hover > .main-menu_list_dish_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_start_card:hover > .main-menu_list_start_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_start_card:hover > .main-menu_list_dess_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
+}
+.main-menu_list_start_card:hover i {
+  animation: check-rotation 0.6s linear;
 }
 .main-menu_list_start_card_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 345px;
+  width: 282px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -580,14 +586,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 72px;
+  width: 2em;
   margin-right: -3em;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 1.3em;
   background-color: #99E2D0;
   color: white;
-  cursor: pointer;
 }
 .main-menu_list_dish {
   display: flex;
@@ -607,7 +612,7 @@ body {
 .main-menu_list_dish_card {
   display: flex;
   height: 75px;
-  width: 385px;
+  width: 22.5em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -620,20 +625,26 @@ body {
 .main-menu_list_dish_card:hover > .main-menu_list_dish_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_dish_card:hover > .main-menu_list_start_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_dish_card:hover > .main-menu_list_dess_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
+}
+.main-menu_list_dish_card:hover i {
+  animation: check-rotation 0.6s linear;
 }
 .main-menu_list_dish_card_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 345px;
+  width: 282px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -665,14 +676,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 72px;
+  width: 2em;
   margin-right: -3em;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 1.3em;
   background-color: #99E2D0;
   color: white;
-  cursor: pointer;
 }
 .main-menu_list_dess {
   display: flex;
@@ -692,7 +702,7 @@ body {
 .main-menu_list_dess_card {
   display: flex;
   height: 75px;
-  width: 385px;
+  width: 22.5em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -705,20 +715,26 @@ body {
 .main-menu_list_dess_card:hover > .main-menu_list_dish_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_dess_card:hover > .main-menu_list_start_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
 }
 .main-menu_list_dess_card:hover > .main-menu_list_dess_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
+  width: 5em;
+}
+.main-menu_list_dess_card:hover i {
+  animation: check-rotation 0.6s linear;
 }
 .main-menu_list_dess_card_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 345px;
+  width: 282px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -750,14 +766,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 72px;
+  width: 2em;
   margin-right: -3em;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 1.3em;
   background-color: #99E2D0;
   color: white;
-  cursor: pointer;
 }
 @keyframes show-menu {
   0% {
@@ -770,12 +785,23 @@ body {
 @keyframes checkbox {
   0% {
     margin-right: -3em;
+    width: 2em;
   }
   50% {
     margin-right: -1.5em;
+    width: 4em;
   }
   100% {
     margin-right: 0;
+    width: 4em;
+  }
+}
+@keyframes check-rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .main-menu_btn {
