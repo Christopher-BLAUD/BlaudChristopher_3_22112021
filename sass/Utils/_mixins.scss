@@ -114,7 +114,7 @@
             &_card{
                 display: flex;
                 height: 75px;
-                width: 22.5em;
+                width: 23.7em;
                 border-radius: 20px;
                 margin-top: 1em;
                 padding-left: .8em;
@@ -136,9 +136,12 @@
                     animation: checkbox .5s linear both;
                 }
                 &:hover i{
-                    animation: check-rotation .6s linear;
+                    animation: check-rotation .5s linear;
                 }
-                
+                &--medium{
+                    @extend .main-menu_list_dish_card;
+                    height: 6.3em;
+                }
                 &_info{
                     display: flex;
                     flex-direction: column;
@@ -154,13 +157,12 @@
                         display: inline-block;
                         margin-bottom: .9em;
                         @include ellipsis;
-
                     }
                 }
                 &_price{
                     display: flex;
                     align-items: flex-end;
-                    justify-content: center;
+                    justify-content: flex-start;
                     margin: 0 .9em;
                     margin-bottom: .9em;
                     width: 55px;

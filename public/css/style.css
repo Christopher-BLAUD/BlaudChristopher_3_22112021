@@ -522,7 +522,7 @@ body {
 .main-menu_list_start_card {
   display: flex;
   height: 75px;
-  width: 22.5em;
+  width: 23.7em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -545,7 +545,10 @@ body {
   animation: checkbox 0.5s linear both;
 }
 .main-menu_list_start_card:hover i {
-  animation: check-rotation 0.6s linear;
+  animation: check-rotation 0.5s linear;
+}
+.main-menu_list_start_card--medium {
+  height: 6.3em;
 }
 .main-menu_list_start_card_info {
   display: flex;
@@ -573,7 +576,7 @@ body {
 .main-menu_list_start_card_price {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 0.9em;
   margin-bottom: 0.9em;
   width: 55px;
@@ -606,10 +609,10 @@ body {
   font-weight: lighter;
   margin-bottom: 0.3em;
 }
-.main-menu_list_dish_card {
+.main-menu_list_dish_card, .main-menu_list_dess_card--medium, .main-menu_list_dish_card--medium, .main-menu_list_start_card--medium {
   display: flex;
   height: 75px;
-  width: 22.5em;
+  width: 23.7em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -619,20 +622,23 @@ body {
   animation: show-menu 1.5s linear 1s both;
   transform-origin: top;
 }
-.main-menu_list_dish_card:hover > .main-menu_list_dish_card_icon {
+.main-menu_list_dish_card:hover > .main-menu_list_dish_card_icon, .main-menu_list_dess_card--medium:hover > .main-menu_list_dish_card_icon, .main-menu_list_dish_card--medium:hover > .main-menu_list_dish_card_icon, .main-menu_list_start_card--medium:hover > .main-menu_list_dish_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
 }
-.main-menu_list_dish_card:hover > .main-menu_list_start_card_icon {
+.main-menu_list_dish_card:hover > .main-menu_list_start_card_icon, .main-menu_list_dess_card--medium:hover > .main-menu_list_start_card_icon, .main-menu_list_dish_card--medium:hover > .main-menu_list_start_card_icon, .main-menu_list_start_card--medium:hover > .main-menu_list_start_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
 }
-.main-menu_list_dish_card:hover > .main-menu_list_dess_card_icon {
+.main-menu_list_dish_card:hover > .main-menu_list_dess_card_icon, .main-menu_list_dess_card--medium:hover > .main-menu_list_dess_card_icon, .main-menu_list_dish_card--medium:hover > .main-menu_list_dess_card_icon, .main-menu_list_start_card--medium:hover > .main-menu_list_dess_card_icon {
   margin-right: 0;
   animation: checkbox 0.5s linear both;
 }
-.main-menu_list_dish_card:hover i {
-  animation: check-rotation 0.6s linear;
+.main-menu_list_dish_card:hover i, .main-menu_list_dess_card--medium:hover i, .main-menu_list_dish_card--medium:hover i, .main-menu_list_start_card--medium:hover i {
+  animation: check-rotation 0.5s linear;
+}
+.main-menu_list_dish_card--medium {
+  height: 6.3em;
 }
 .main-menu_list_dish_card_info {
   display: flex;
@@ -660,7 +666,7 @@ body {
 .main-menu_list_dish_card_price {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 0.9em;
   margin-bottom: 0.9em;
   width: 55px;
@@ -696,7 +702,7 @@ body {
 .main-menu_list_dess_card {
   display: flex;
   height: 75px;
-  width: 22.5em;
+  width: 23.7em;
   border-radius: 20px;
   margin-top: 1em;
   padding-left: 0.8em;
@@ -719,7 +725,10 @@ body {
   animation: checkbox 0.5s linear both;
 }
 .main-menu_list_dess_card:hover i {
-  animation: check-rotation 0.6s linear;
+  animation: check-rotation 0.5s linear;
+}
+.main-menu_list_dess_card--medium {
+  height: 6.3em;
 }
 .main-menu_list_dess_card_info {
   display: flex;
@@ -747,7 +756,7 @@ body {
 .main-menu_list_dess_card_price {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 0.9em;
   margin-bottom: 0.9em;
   width: 55px;
