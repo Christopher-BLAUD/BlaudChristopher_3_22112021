@@ -25,9 +25,10 @@
     box-shadow: 0px -5px 9px black;
     & span{
         font-family: 'shrikhand', Verdana, Geneva, Tahoma, sans-serif;
-        width: 150px;
+        width: 6em;
         font-size: 2em;
         font-weight: bold;
+        text-align: center;
     }
 }
 @mixin card-restaurant-img {
@@ -163,7 +164,7 @@
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-start;
-                    margin: 0 .9em;
+                    margin: 0 1em;
                     margin-bottom: .9em;
                     width: 55px;
                 }
@@ -210,3 +211,17 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+ /* Responsive */
+
+ @mixin touch-pad{
+     @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @content; 
+     }
+ }
+ @mixin title-style {
+    margin: 1.5em 0;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'shrikhand', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+ }

@@ -12,8 +12,11 @@ body{
 }
 .header-logo{
     @include header;
+    @include touch-pad{
+        height: 5em;
+        font-size: 1.5em;
+    }
 }
-
 /* Loader */
 
 .loader{
@@ -87,12 +90,19 @@ body{
     display: flex;
     justify-content: center;
     background-color: #eaeaea;
+    @include touch-pad{
+        height: 5em;
+        align-items: center;
+    }
     & input{
         border: none;
         background-color: #eaeaea;
         margin-left: 1em;
         width: 57%;
         outline: none;
+        @include touch-pad{
+            font-size: 1em;
+        }
         &::placeholder{
             font-weight: bold;
         }
@@ -111,11 +121,21 @@ body{
     flex-flow: column wrap;
     align-items: center;
     background: #f6f6f6;
+    @include touch-pad{
+        height: 14em;
+        justify-content: center;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        box-shadow: $shadow;
+    }
     & h1{
         padding: 0 3em;
         text-align: center;
         margin-bottom: 0;
         margin-top: 1.5em;
+        @include touch-pad{
+            margin-top: .5em;
+        }
     }
     &_txt{
         padding: 0 2em;
@@ -128,6 +148,13 @@ body{
         &:hover{
             @include btn-hover;
         }
+        @include touch-pad{
+            width: 14em;
+            height: 3em;
+            border-radius: 40px;
+            font-size: 1.2em;
+            margin: 1em 0;
+        }
     }
 }
 
@@ -138,12 +165,22 @@ body{
     flex-direction: column;
     padding: 0 1em;
     margin: 2em 0;
+    & h1{
+        @include touch-pad{
+            @include title-style;
+        }
+    }
     &_choice{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    
+        @include touch-pad{
+            flex-flow: column wrap;
+            height: 15em;
+            justify-content: center;
+            margin: 2.5em 0;
+        }
         &_btn{
             display: flex;
             align-items: center;
@@ -156,6 +193,10 @@ body{
             position: relative;
             background-color: #f6f6f6;
             box-shadow: 0px 6px 16px #cfcfcf;
+            @include touch-pad{
+                width: 20em;
+                margin: 1.5em 0;
+            }
             &:hover{
                 background-color: #f5edff;
                 & i{
@@ -212,14 +253,25 @@ body{
     margin-bottom: 0;
     padding: 0 1em;
     background-color: $bg;
+    @include touch-pad{
+        background-color: white;
+    }
     & h1{
         margin-top: 2em;
         margin-bottom: .5em;
+        @include touch-pad{
+            @include title-style;
+        }
     }
     &_card{
         display: flex;
         flex-direction: column;
         margin-bottom: 3.5em;
+        @include touch-pad{
+            flex-flow: column wrap;
+            height: 672px;
+            align-items: center;
+        }
         & article{
             display: flex;
             flex-direction: column;
@@ -229,6 +281,11 @@ body{
             border-radius: 20px;
             box-shadow: 0px 6px 16px #cfcfcf;
             overflow: hidden;
+            @include touch-pad{
+                width: 45%;
+                height: 18em;
+                margin: 1.5em 1em;
+            }
             & a{
                 width: 100%;
                 height: 100%;
