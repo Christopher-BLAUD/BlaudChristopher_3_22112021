@@ -16,19 +16,22 @@ body{
         height: 5em;
         font-size: 1.5em;
     }
+    @include desktop-only{
+        font-size: 2em;
+    }
 }
-/* Loader */
+
+/*          Loader       */
 
 .loader{
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: black;
+    background-color: white;
     z-index: 99;
     width: 100%;
     height: 100%;
-    color: white;
     opacity: 0;
     animation: loader 3s linear;
     animation-fill-mode: both;
@@ -66,14 +69,14 @@ body{
 }
 @keyframes loader {
     0%{
-        opacity: .9;
+        opacity: 1;
     }
     50%{
-        opacity: .9;
+        opacity: 1;
 
     }
     75%{
-        opacity: .4;
+        opacity: .6;
 
     }
     100%{
@@ -83,8 +86,14 @@ body{
     
 }
 
+.explore{
+    @include desktop-only{
+        position: relative;
+        box-shadow: $shadow;
+    }
+}
 
-/*    Recherche   */
+/*              Recherche               */
 
 .form{
     display: flex;
@@ -93,6 +102,10 @@ body{
     @include touch-pad{
         height: 5em;
         align-items: center;
+    }
+    @include desktop-only{
+        background-color: #f6f6f6;
+        font-size: 1.1em;
     }
     & input{
         border: none;
@@ -103,6 +116,10 @@ body{
         @include touch-pad{
             font-size: 1em;
         }
+        @include desktop-only{
+            background-color: #f6f6f6;
+            font-size: 1em;
+        }
         &::placeholder{
             font-weight: bold;
         }
@@ -111,10 +128,14 @@ body{
         display: flex;
         justify-content: center;
         margin: .8em;
+        @include desktop-only{
+            margin-top: 1.5em;    
+        }
+
     }
 }
 
-/* Section exploration */
+/*              Section exploration             */
 
 .explore_info{
     display: flex;
@@ -124,9 +145,10 @@ body{
     @include touch-pad{
         height: 14em;
         justify-content: center;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
         box-shadow: $shadow;
+    }
+    @include desktop-only{
+
     }
     & h1{
         padding: 0 3em;
@@ -135,6 +157,9 @@ body{
         margin-top: 1.5em;
         @include touch-pad{
             margin-top: .5em;
+        }
+        @include desktop-only{
+            margin-top: 0;
         }
     }
     &_txt{
@@ -155,19 +180,25 @@ body{
             font-size: 1.2em;
             margin: 1em 0;
         }
-    }
+}
 }
 
-/*   Fonctionnement   */
+/*              Fonctionnement              */
 
 .functioning{
     display: flex;
     flex-direction: column;
     padding: 0 1em;
     margin: 2em 0;
+    @include desktop-only{
+        margin-bottom: 5em;
+    }
     & h1{
         @include touch-pad{
             @include title-style;
+        }
+        @include desktop-only{
+            margin-bottom: 1em;
         }
     }
     &_choice{
@@ -181,6 +212,10 @@ body{
             justify-content: center;
             margin: 2.5em 0;
         }
+        @include desktop-only{
+            justify-content: space-around;
+            flex-direction: row;
+        }
         &_btn{
             display: flex;
             align-items: center;
@@ -188,7 +223,7 @@ body{
             margin: 1em 0;
             width: 90%;
             height: 70px;
-            border-radius: 20px;
+            border-radius: 25px;
             flex-wrap: nowrap;
             position: relative;
             background-color: #f6f6f6;
@@ -196,6 +231,10 @@ body{
             @include touch-pad{
                 width: 20em;
                 margin: 1.5em 0;
+            }
+            @include desktop-only{
+                margin: 1em 2em;
+                width: 18em;
             }
             &:hover{
                 background-color: #f5edff;
@@ -244,7 +283,7 @@ body{
 }
 
 
-/*  Restaurants   */
+/*              Restaurants             */
 
 .restaurant{
     display: flex;
@@ -255,6 +294,9 @@ body{
     background-color: $bg;
     @include touch-pad{
         background-color: white;
+    }
+    @include desktop-only{
+        overflow-x: scroll;
     }
     & h1{
         margin-top: 2em;
@@ -272,6 +314,12 @@ body{
             height: 672px;
             align-items: center;
         }
+        @include desktop-only{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 120em;
+        }
         & article{
             display: flex;
             flex-direction: column;
@@ -285,6 +333,11 @@ body{
                 width: 45%;
                 height: 18em;
                 margin: 1.5em 1em;
+            }
+            @include desktop-only{
+                width: 23em;
+                height: 281px;
+                margin: 2em;
             }
             & a{
                 width: 100%;
@@ -377,13 +430,13 @@ body{
     }
     
 }
-/*   Footer   */
+/*                  Footer              */
 
 .footer{
     @include footer;
 }
-
-/*   Menu des restaurants   */
+/*              Page restaurants            */
+/*                  Menu                    */
 
 .header-menu{
     @include header;
@@ -392,6 +445,14 @@ body{
         left: 30px;
         top: 27px;
         font-size: 1.3em;
+        @include touch-pad{
+            font-size: 1.5em;
+            top: 37px;
+        }
+        @include desktop-only{
+            font-size: 1.5em;
+            top: 37px;
+        }
         & a{
             color: black;
         }
@@ -400,21 +461,58 @@ body{
 .main-menu{
     display: flex;
     flex-direction: column;
+    align-items: center;
     &_pic_ldds{
         @include layout-bg-img-menu;
-        background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg)
+        background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        @include touch-pad{
+            background-position: bottom;
+            height: 377px;
+        } 
+        @include desktop-only{
+            height: 500px;
+            background-position: center;
+            background-attachment: fixed;
+        }
     }
     &_pic_alf{
         @include layout-bg-img-menu;
         background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+        @include touch-pad{
+            background-position: bottom;
+            height: 377px;
+        }
+        @include desktop-only{
+            height: 500px;
+            background-position: center;
+            background-attachment: fixed;
+        }
     }
     &_pic_lne{
         @include layout-bg-img-menu;
         background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        @include touch-pad{
+            background-position: bottom 51em left;
+            height: 377px;
+        }
+        @include desktop-only{
+            height: 500px;
+            background-position: center;
+            background-attachment: fixed;
+        }
     }
     &_pic_lpdg{
         @include layout-bg-img-menu;
         background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        @include touch-pad{
+            background-position: bottom;
+            height: 377px;
+        }
+        @include desktop-only{
+            height: 500px;
+            background-position: center;
+            background-attachment: fixed;
+        }
     }
     &_list{
         display: flex;
@@ -424,32 +522,86 @@ body{
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         padding: .5em 1em;
+        @include touch-pad{
+            flex-flow: row wrap;
+        }
+        @include desktop-only{
+            flex-flow: row wrap;
+            width: 70em;
+        }
         &_title{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-right: 1em;
+            @include touch-pad{
+                justify-content: center;
+                padding: 0;
+                width: 100%;
+                margin: 1em 0;
+            }
+            @include desktop-only{
+                justify-content: center;
+                width: 100%;
+                margin: 2em 0;
+            }
             & h1{
                 font-family: 'shrikhand',Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 1.9em;
             }
             & i{
                 font-size: 1.7em;
+                @include touch-pad{
+                    margin-left: 1em;
+                }
+                @include desktop-only{
+                    margin-left: 1em;
+                }
             }
         }
         &_start{
             @include layout-card-menu(.5s);
             margin-bottom: 2em;
+            @include touch-pad{
+                width: 50%;
+                align-items: center;
+                margin-bottom: 6em;
+            }
+            @include desktop-only{
+                width: 50%;
+                align-items: center;
+            }
         }
         &_dish{
             @include layout-card-menu(1s);
             margin-bottom: 2em;
+            @include touch-pad{
+                width: 50%;
+                align-items: center;
+                margin-bottom: 6em;
+            }
+            @include desktop-only{
+                width: 50%;
+                align-items: center;
+            }
         }
         &_dess{
             @include layout-card-menu(1.5s);
             margin-bottom: 2em;
+            @include touch-pad{
+                width: 100%;
+                align-items: center;
+                margin-bottom: 6em;
+            }
+            @include desktop-only{
+                width: 100%;
+                align-items: center;
+            }
         }
     }
+
+/*              Animation apparition des menus              */
+
 @keyframes show-menu {
     0%{
         transform: scale(0);
@@ -480,10 +632,14 @@ body{
         transform: rotate(360deg);
     }
 }
+
+/*              Bouton "Commander"              */
+
     &_btn{
         display: flex;
         justify-content: center;
         background-color: $bg;
+        width: 70em;
         & button{
             @include button(170px);
             margin: 1em 0;

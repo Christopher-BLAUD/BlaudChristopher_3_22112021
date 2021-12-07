@@ -29,6 +29,12 @@
         font-size: 2em;
         font-weight: bold;
         text-align: center;
+        @include touch-pad{
+            font-size: 3em;
+        }
+        @include desktop-only{
+            font-size: 3em;
+        }
     }
 }
 @mixin card-restaurant-img {
@@ -106,6 +112,9 @@
             display: flex;
             width: 3em;
             border-bottom: 3px solid $tertiary-color;
+            @include touch-pad{
+                margin-bottom: 1em;
+            }
             & h2{
                 font-size: 1.1em;
                 font-weight: lighter;
@@ -124,6 +133,10 @@
                 overflow: hidden;
                 animation: show-menu 1.5s linear $timing-anim both;
                 transform-origin: top;
+                @include touch-pad{
+                    width: 21em;
+                    margin: 1em;
+                }
                 &:hover > .main-menu_list_dish_card_icon{
                     margin-right: 0;
                     animation: checkbox .5s linear both;
@@ -211,11 +224,17 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
- /* Responsive */
+
+/*              Responsive              */
 
  @mixin touch-pad{
      @media screen and (min-width: 768px) and (max-width: 1024px) {
         @content; 
+     }
+ }
+ @mixin desktop-only {
+     @media screen and (min-width: 1025px){
+         @content;
      }
  }
  @mixin title-style {
