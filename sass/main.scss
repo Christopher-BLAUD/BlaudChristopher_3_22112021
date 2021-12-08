@@ -518,7 +518,12 @@ body{
         background-color: $bg;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        padding: .5em 1em;
+        width: 100%;
+        padding: 0 1em;
+        & article{
+            display: flex;
+            justify-content: center;
+        }
         @include touch-pad{
             flex-flow: row wrap;
         }
@@ -531,6 +536,7 @@ body{
             justify-content: space-between;
             align-items: center;
             padding-right: 1em;
+            margin-top: .5em;
             @include touch-pad{
                 justify-content: center;
                 padding: 0;
