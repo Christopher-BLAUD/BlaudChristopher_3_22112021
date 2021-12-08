@@ -636,7 +636,10 @@ body{
         display: flex;
         justify-content: center;
         background-color: $bg;
-        width: 70em;
+        width: 100%;
+        @include desktop-only{
+            width: 70em;
+        }
         & button{
             @include button(170px);
             margin: 1em 0;

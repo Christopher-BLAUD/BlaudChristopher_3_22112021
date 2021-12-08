@@ -1171,7 +1171,12 @@ body {
   display: flex;
   justify-content: center;
   background-color: #f6f6f6;
-  width: 70em;
+  width: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .main-menu_btn {
+    width: 70em;
+  }
 }
 .main-menu_btn button {
   display: flex;
