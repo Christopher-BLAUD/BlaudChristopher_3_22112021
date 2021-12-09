@@ -90,6 +90,8 @@ body {
   padding-bottom: 1em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(to right bottom, #FF79DA, #9356DC);
+  background-image: -moz-linear-gradient(to right bottom, #FF79DA, #9356DC);
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
 }
 .loader_txt span {
@@ -786,7 +788,7 @@ body {
 }
 .main-menu_list_title h1 {
   font-family: "shrikhand", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.9em;
+  font-size: 1.7em;
 }
 .main-menu_list_title i {
   font-size: 1.7em;

@@ -52,6 +52,8 @@ body{
         padding-bottom: 1em;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(to right bottom, $secondary-color, $primary-color);
+        background-image: -moz-linear-gradient(to right bottom, $secondary-color, $primary-color);
         background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
         & span{
             font-family: 'shrikhand', Verdana, Geneva, Tahoma, sans-serif;
@@ -550,7 +552,7 @@ body{
             }
             & h1{
                 font-family: 'shrikhand',Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 1.9em;
+                font-size: 1.7em;
             }
             & i{
                 font-size: 1.7em;
