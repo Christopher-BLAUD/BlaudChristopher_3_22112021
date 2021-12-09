@@ -88,11 +88,12 @@ body {
 .loader_txt {
   display: flex;
   padding-bottom: 1em;
+  background: -moz-linear-gradient(to right bottom, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(to right bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(to right bottom, #FF79DA, #9356DC);
-  background-image: -moz-linear-gradient(to right bottom, #FF79DA, #9356DC);
-  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  -webkit-mask-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
 }
 .loader_txt span {
   font-family: "shrikhand", Verdana, Geneva, Tahoma, sans-serif;
