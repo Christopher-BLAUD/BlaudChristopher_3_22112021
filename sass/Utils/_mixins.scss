@@ -33,7 +33,7 @@
             font-size: 3em;
         }
         @include desktop-only{
-            font-size: 3em;
+            font-size: 4em;
         }
     }
 }
@@ -134,7 +134,7 @@
                 animation: show-menu 1.5s linear $timing-anim both;
                 transform-origin: top;
                 @include touch-pad{
-                    width: 21em;
+                    width: 22.5em;
                     margin: 1em;
                 }
                 &:hover > .main-menu_list_dish_card_icon{

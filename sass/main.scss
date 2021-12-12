@@ -231,6 +231,7 @@ body{
             @include touch-pad{
                 width: 20em;
                 margin: 1.5em 0;
+                padding-left: 1em;
             }
             @include desktop-only{
                 margin: 1em 2em;
@@ -440,6 +441,10 @@ body{
 
 .header-menu{
     @include header;
+    @include desktop-only{
+        height: 9em;
+        align-items: center;   
+    }
     &_icon{
         position: absolute;
         left: 30px;
@@ -450,8 +455,8 @@ body{
             top: 37px;
         }
         @include desktop-only{
-            font-size: 1.5em;
-            top: 37px;
+            font-size: 2em;
+            top: 59px;
         }
         & a{
             color: black;
@@ -470,7 +475,7 @@ body{
             height: 377px;
         } 
         @include desktop-only{
-            height: 500px;
+            height: 600px;
             background-position: center;
             background-attachment: fixed;
         }
@@ -483,7 +488,7 @@ body{
             height: 377px;
         }
         @include desktop-only{
-            height: 500px;
+            height: 600px;
             background-position: center;
             background-attachment: fixed;
         }
@@ -496,7 +501,7 @@ body{
             height: 377px;
         }
         @include desktop-only{
-            height: 500px;
+            height: 600px;
             background-position: center;
             background-attachment: fixed;
         }
@@ -509,7 +514,7 @@ body{
             height: 377px;
         }
         @include desktop-only{
-            height: 500px;
+            height: 600px;
             background-position: center;
             background-attachment: fixed;
         }

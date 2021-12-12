@@ -32,7 +32,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .header-logo span {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -311,6 +311,7 @@ body {
   .functioning_choice_btn {
     width: 20em;
     margin: 1.5em 0;
+    padding-left: 1em;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -628,7 +629,13 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .header-menu span {
-    font-size: 3em;
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-menu {
+    height: 9em;
+    align-items: center;
   }
 }
 .header-menu_icon {
@@ -645,8 +652,8 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .header-menu_icon {
-    font-size: 1.5em;
-    top: 37px;
+    font-size: 2em;
+    top: 59px;
   }
 }
 .header-menu_icon a {
@@ -675,7 +682,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .main-menu_pic_ldds {
-    height: 500px;
+    height: 600px;
     background-position: center;
     background-attachment: fixed;
   }
@@ -695,7 +702,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .main-menu_pic_alf {
-    height: 500px;
+    height: 600px;
     background-position: center;
     background-attachment: fixed;
   }
@@ -715,7 +722,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .main-menu_pic_lne {
-    height: 500px;
+    height: 600px;
     background-position: center;
     background-attachment: fixed;
   }
@@ -735,7 +742,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .main-menu_pic_lpdg {
-    height: 500px;
+    height: 600px;
     background-position: center;
     background-attachment: fixed;
   }
@@ -839,7 +846,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-menu_list_start_card {
-    width: 21em;
+    width: 22.5em;
     margin: 1em;
   }
 }
@@ -953,7 +960,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-menu_list_dish_card, .main-menu_list_dess_card--medium, .main-menu_list_dish_card--medium, .main-menu_list_start_card--medium {
-    width: 21em;
+    width: 22.5em;
     margin: 1em;
   }
 }
@@ -1067,7 +1074,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-menu_list_dess_card {
-    width: 21em;
+    width: 22.5em;
     margin: 1em;
   }
 }
