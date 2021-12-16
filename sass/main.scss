@@ -425,6 +425,7 @@ body{
             }
         }
     }
+
 @keyframes heart {
     100%{
         transform: scale(1)
@@ -560,13 +561,28 @@ body{
                 font-family: 'shrikhand',Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 1.7em;
             }
-            & i{
+            &_icon{
+                display: flex;
                 font-size: 1.7em;
+                position: relative;
+                cursor: pointer;
                 @include touch-pad{
                     margin-left: 1em;
                 }
                 @include desktop-only{
                     margin-left: 1em;
+                }
+                &:hover > .main-menu_list_title_icon_full{
+                    animation: heart 1s both;
+                }
+                &:hover > .main-menu_list_title_icon_empty{
+                    @include heart-color;
+                }
+                &_full{
+                    transform: scale(0);
+                    position: absolute;
+                    @include heart-color;
+                    
                 }
             }
         }

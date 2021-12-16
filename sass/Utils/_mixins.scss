@@ -180,6 +180,10 @@
                     margin: 0 1em;
                     margin-bottom: .9em;
                     width: 55px;
+                    margin-right: 2.5em;
+                    @include desktop-only{
+                        margin-right: 1em;
+                    }
                 }
                 &_icon{
                     display: flex;
